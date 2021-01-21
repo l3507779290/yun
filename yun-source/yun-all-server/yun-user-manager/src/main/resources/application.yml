@@ -1,0 +1,26 @@
+server:
+  port: 1010
+spring:
+  application:
+    name: ftpservers
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/downloader?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+#热部署插件
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths:  src/main/ #重启目录
+      exclude: templates/**
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
+#mybatis插件
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.yunusermanager.pojo
+
+

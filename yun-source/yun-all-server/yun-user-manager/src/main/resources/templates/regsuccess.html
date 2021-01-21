@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style >
+        #images {
+            height: 30px;
+            width: 30px;
+        }
+        #cent {
+            position: absolute;
+            top: 300px;
+            left: 600px;
+        }
+        #abs {
+            font-size: 40px;
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+<div  id="cent">
+  <!--/*@thymesVar id="message" type="templates"*/-->
+    <img src="../static/images/registersuccess/regis.jpg" id="images"><strong id="abs">注册成功！！！</strong><br></a><a th:text="${message}"></a>
+<br><a href="/user/login">点击跳转到登录......</a>
+</div>
+</body>
+</html>

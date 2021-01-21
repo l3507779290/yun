@@ -1,0 +1,16 @@
+server:
+  port: 1011
+spring:
+  application:
+    name: ftpservers
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/downloader?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+#mybatis插件
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: com/example/yunftpmanager/*Mapper.xml
+  type-aliases-package: com.example.yunusermanager.pojo

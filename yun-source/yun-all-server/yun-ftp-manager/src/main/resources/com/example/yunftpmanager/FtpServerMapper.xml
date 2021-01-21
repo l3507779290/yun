@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.yunftpmanager.dao.FtpServerMapper">
+
+    <select id="findAllUserFileAddress" resultType="com.example.yunftpmanager.pojo.addFtpUser">
+        select fi.filepath,us.account,us.password from user_file fi right join login_user us on fi.account=us.account
+    </select>
+</mapper>
